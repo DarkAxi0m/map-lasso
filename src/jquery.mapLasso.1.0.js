@@ -243,6 +243,17 @@
       return coords;
     };
 
+    
+    //Google Maps, Polygon containsLocation 
+    //https://developers.google.com/maps/documentation/javascript/geometry#containsLocation
+    base.containsLocation = function(latLng) {
+       if (!lassoPoly)
+         console.error('No lassoPoly?')
+       return google.maps.geometry.poly.containsLocation(latLng, lassoPoly);
+    }
+
+    
+    
     /* ---------------------------------------------------
     * end public methods
     * ---------------------------------------------------*/
